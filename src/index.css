@@ -1,0 +1,409 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Primary - teal/cyan */
+  --color-primary-50: #e6fbfa;
+  --color-primary-100: #c7f5f3;
+  --color-primary-200: #94ebe8;
+  --color-primary-300: #5adcd8;
+  --color-primary-400: #2cc4c0;
+  --color-primary-500: #14a8a4;
+  --color-primary-600: #0d8a87;
+  --color-primary-700: #0a6e6c;
+  --color-primary-800: #085856;
+  --color-primary-900: #064847;
+
+  /* Secondary - blue */
+  --color-secondary-50: #eef4ff;
+  --color-secondary-100: #d9e6ff;
+  --color-secondary-200: #bcd3ff;
+  --color-secondary-300: #8eb6ff;
+  --color-secondary-400: #5990ff;
+  --color-secondary-500: #3470ff;
+  --color-secondary-600: #1d52f5;
+  --color-secondary-700: #163fe0;
+  --color-secondary-800: #1834b6;
+  --color-secondary-900: #1a3290;
+
+  /* Accent - coral */
+  --color-accent-50: #fff1ed;
+  --color-accent-100: #ffe0d5;
+  --color-accent-200: #ffc0ac;
+  --color-accent-300: #ff9778;
+  --color-accent-400: #ff6b4a;
+  --color-accent-500: #ff4825;
+  --color-accent-600: #f32e0a;
+  --color-accent-700: #c8210a;
+  --color-accent-800: #a21f10;
+  --color-accent-900: #841e12;
+
+  /* Success */
+  --color-success-50: #edfdf5;
+  --color-success-100: #d4f9e6;
+  --color-success-200: #aaf0cf;
+  --color-success-300: #72e0b2;
+  --color-success-400: #3fcc91;
+  --color-success-500: #1bb577;
+  --color-success-600: #0d9461;
+  --color-success-700: #0a754e;
+  --color-success-800: #0a5d3f;
+  --color-success-900: #094d35;
+
+  /* Warning */
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+
+  /* Error */
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+  --color-error-800: #991b1b;
+  --color-error-900: #7f1d1d;
+}
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-bg-strong: rgba(255, 255, 255, 0.72);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-border-subtle: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --glass-blur: 24px;
+  --glass-saturate: 180%;
+
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a5e;
+  --text-muted: #8a8a9a;
+  --text-on-accent: #ffffff;
+
+  --bg-base: linear-gradient(135deg, #c7e0e8 0%, #d5e3ef 30%, #e8d5e0 60%, #d5e8e0 100%);
+  --bg-blob-1: rgba(20, 168, 164, 0.25);
+  --bg-blob-2: rgba(52, 112, 255, 0.18);
+  --bg-blob-3: rgba(255, 107, 74, 0.12);
+  --bg-blob-4: rgba(27, 181, 119, 0.15);
+
+  --bubble-sent: linear-gradient(135deg, #14a8a4, #0d8a87);
+  --bubble-sent-text: #ffffff;
+  --bubble-received: rgba(255, 255, 255, 0.7);
+  --bubble-received-text: #1a1a2e;
+}
+
+.dark {
+  --glass-bg: rgba(30, 30, 45, 0.55);
+  --glass-bg-strong: rgba(30, 30, 45, 0.72);
+  --glass-bg-subtle: rgba(30, 30, 45, 0.3);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-subtle: rgba(255, 255, 255, 0.06);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --glass-blur: 24px;
+  --glass-saturate: 180%;
+
+  --text-primary: #f0f0f5;
+  --text-secondary: #c0c0d0;
+  --text-muted: #80808f;
+  --text-on-accent: #ffffff;
+
+  --bg-base: linear-gradient(135deg, #0a0a1a 0%, #12122a 30%, #1a1228 60%, #0a1a18 100%);
+  --bg-blob-1: rgba(20, 168, 164, 0.15);
+  --bg-blob-2: rgba(52, 112, 255, 0.12);
+  --bg-blob-3: rgba(255, 107, 74, 0.08);
+  --bg-blob-4: rgba(27, 181, 119, 0.1);
+
+  --bubble-sent: linear-gradient(135deg, #14a8a4, #0d8a87);
+  --bubble-sent-text: #ffffff;
+  --bubble-received: rgba(255, 255, 255, 0.08);
+  --bubble-received-text: #f0f0f5;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-base);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animated background blobs */
+.bg-blobs {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-blobs::before,
+.bg-blobs::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float-blob 20s ease-in-out infinite;
+}
+
+.bg-blobs::before {
+  top: -200px;
+  left: -100px;
+  background: var(--bg-blob-1);
+}
+
+.bg-blobs::after {
+  bottom: -200px;
+  right: -100px;
+  background: var(--bg-blob-2);
+  animation-delay: -10s;
+}
+
+.bg-blob-extra-1,
+.bg-blob-extra-2 {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-blob-extra-1 {
+  width: 500px;
+  height: 500px;
+  top: 30%;
+  left: 50%;
+  background: var(--bg-blob-3);
+  animation: float-blob 25s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+.bg-blob-extra-2 {
+  width: 400px;
+  height: 400px;
+  top: 60%;
+  left: 20%;
+  background: var(--bg-blob-4);
+  animation: float-blob 30s ease-in-out infinite;
+  animation-delay: -15s;
+}
+
+@keyframes float-blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(80px, -60px) scale(1.1); }
+  66% { transform: translate(-50px, 50px) scale(0.95); }
+}
+
+/* Liquid glass utility classes */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-strong {
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(calc(var(--glass-blur) + 8px)) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) + 8px)) saturate(var(--glass-saturate));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-subtle {
+  background: var(--glass-bg-subtle);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid var(--glass-border-subtle);
+}
+
+.glass-input {
+  background: var(--glass-bg-subtle);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid var(--glass-border-subtle);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: var(--color-primary-400);
+  box-shadow: 0 0 0 3px rgba(20, 168, 164, 0.15);
+}
+
+.glass-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Liquid glass button */
+.glass-btn {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.glass-btn:hover {
+  background: var(--glass-bg-strong);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.glass-btn:active {
+  transform: translateY(0);
+}
+
+/* Primary gradient button */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-600));
+  color: var(--text-on-accent);
+  border: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(20, 168, 164, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(20, 168, 164, 0.4);
+  filter: brightness(1.05);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Text helpers */
+.text-primary-c { color: var(--text-primary); }
+.text-secondary-c { color: var(--text-secondary); }
+.text-muted-c { color: var(--text-muted); }
+
+/* Custom scrollbar */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.5);
+}
+
+/* Message bubble entrance animation */
+@keyframes bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-bubble-in {
+  animation: bubble-in 0.25s ease-out;
+}
+
+/* Fade in */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* Slide in from right */
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.25s ease-out;
+}
+
+/* Scale in */
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
+}
+
+/* Pulse for online indicator */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(27, 181, 119, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(27, 181, 119, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(27, 181, 119, 0); }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2s infinite;
+}
+
+/* Typing indicator */
+@keyframes typing-dot {
+  0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-4px); }
+}
+
+.typing-dot {
+  animation: typing-dot 1.4s infinite;
+}
+
+/* Liquid glass logo glow */
+.logo-glow {
+  filter: drop-shadow(0 2px 8px rgba(20, 168, 164, 0.3));
+}
+
+/* Smooth theme transition */
+.theme-transition,
+.theme-transition * {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
