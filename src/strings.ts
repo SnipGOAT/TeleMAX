@@ -1,0 +1,27 @@
+const STRINGS = {
+  appName: 'TeleMAX',
+  tagline: 'Liquid glass мессенджер',
+  searchContacts: 'Поиск контактов',
+  newChat: 'Новый чат',
+  attachImage: 'Прикрепить фото',
+  stickers: 'Стикеры',
+  send: 'Отправить',
+  placeholderMessage: 'Напишите сообщение…',
+  conversationSearch: 'Искать в текущем чате',
+  markAsRead: 'Пометить прочитанным',
+  clearChat: 'Очистить чат',
+  mute: 'Отключить звук',
+  unmute: 'Включить звук',
+  compactOn: 'Компактный',
+  compactOff: 'Обычный',
+  autoScrollOn: 'Автопрокрутка включена',
+  autoScrollOff: 'Автопрокрутка выключена',
+  loginTitle: 'Вход в TeleMAX',
+  registerTitle: 'Регистрация',
+  email: 'Почта',
+  password: 'Пароль',
+  login: 'Войти',
+  register: 'Зарегистрироваться',
+};
+
+export default STRINGS;
